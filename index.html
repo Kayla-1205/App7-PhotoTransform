@@ -144,12 +144,7 @@
         <input type="file" id="fileInput" STYLE="background-color: #FF6600;">
       </div>
       <div id="messageDisplayArea"></div>
-     
-<h3>Original:</h3>
-    <canvas id="myCanvas" width=600 height=500 style="border:1px solid #d3d3d3;"></canvas>
-    
-    <h3>Blue Channel Only:</h3>
-    <canvas id="myCanvas2" width=600 height=500 style="border:1px solid #d3d3d3;"></canvas>
+
      
      /* This initializes Canvas 1 context. 
       It is the original image.
@@ -161,7 +156,10 @@
         context.font = '20pt Calibri';
         context.fillStyle = "black";
         context.fillText("Original image will go here", 10, 20);
-       
+       </script>
+     
+     <canvas id="dataCanvas" width=600 height=500 style="border:1px solid #d3d3d3;"></canvas>
+     <script>
  /* This initializes Canvas 2 context. 
       It is the blue image.
      */

@@ -24,10 +24,10 @@
   http://stackoverflow.com/questions/11929099/html5-canvas-drawimage-ratio-bug-ios
   
   Brief Description of Goal of Code:
-  blah, blah, blah,
+  The goal is to create two canvases with one being a blue color.
  
   Known Issues:
-  blah, blah, blah, blah
+  The image is stretched.
 -->
 
  <head>
@@ -114,9 +114,6 @@
 
      // Draw the modified data onto the second canvas
         context2.putImageData(imageData, 0, 0);
-       
-          
-          
           
           
         } // end of img.onload
@@ -147,14 +144,26 @@
         <input type="file" id="fileInput" STYLE="background-color: #FF6600;">
       </div>
       <div id="messageDisplayArea"></div>
-      
+
+     /* This initializes Canvas 1 context. 
+      It is the original image.
+     */
       <canvas id="myCanvas" width=600 height=500 style="border:1px solid #d3d3d3;"></canvas>
-      <script> /* This script initiates the cavas and puts the text on the canvas "myCanvas" */
+      <script> /* This script initiates the canvas and puts the text on the canvas "myCanvas" */
         var canvas = document.getElementById('myCanvas');
         var context = canvas.getContext("2d");
         context.font = '20pt Calibri';
         context.fillStyle = "black";
         context.fillText("Original image will go here", 10, 20);
+       
+ /* This initializes Canvas 2 context. 
+      It is the blue image.
+     */
+       var canvas2 = document.getElementById('dataCanvas');
+        var context2 = canvas2.getContext("2d");
+        context2.font = '18pt Calibri';
+        context2.fillStyle = "blue";
+        context2.fillText("Blue analysis will appear here...", 10, 50);
       </script>
 
     </div><!-- /content -->
